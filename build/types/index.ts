@@ -16,6 +16,8 @@ export type { IERC20Metadata } from "./@openzeppelin/contracts/token/ERC20/exten
 export { IERC20Metadata__factory } from "./factories/@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata__factory";
 export type { IERC20 } from "./@openzeppelin/contracts/token/ERC20/IERC20";
 export { IERC20__factory } from "./factories/@openzeppelin/contracts/token/ERC20/IERC20__factory";
+export type { Bond } from "./contracts/Bond";
+export { Bond__factory } from "./factories/contracts/Bond__factory";
 export type { Stake } from "./contracts/Stake";
 export { Stake__factory } from "./factories/contracts/Stake__factory";
 export type { MockERC20 } from "./contracts/test/MockERC20";

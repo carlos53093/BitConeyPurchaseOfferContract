@@ -151,7 +151,9 @@ contract Stake is Ownable, Pausable {
 
         assert(flag == true);
         uint256 entrance = blockInfo[_blockNumber].prizeAmount * entranceMulter / entranceDivider;
-        uint256 reward = stakeInfo[_blockNumber][msg.sender].amount * blockInfo[_blockNumber].prizeAmount / (blockInfo[_blockNumber].prizeAmount * blockInfo[_blockNumber].price * maxPooledAmountMulter * 10 ** 18 / 100 / (10 ** priceDecimal) / (10**bitConey.decimals()));
+        // uint256 maxPooledAmount = blockInfo[_blockNumber].prizeAmount * blockInfo[_blockNumber].price * maxPooledAmountMulter * 10 ** 18 / 100 / (10 ** priceDecimal) / (10**bitConey.decimals());
+        // uint256 reward = stakeInfo[_blockNumber][msg.sender].amount * blockInfo[_blockNumber].prizeAmount / maxPooledAmount;
+        uint256 reward = stakeInfo[_blockNumber][msg.sender].amount * 10 ** priceDecimal * (1 + blockInfo[_blockNumber].pooledAmount) / blockInfo[_blockNumber].pooledAmount / blockInfo[_blockNumber].price;
         stakeInfo[_blockNumber][msg.sender].refunded = true;
 
         bitConey.transfer(msg.sender, entrance+reward);

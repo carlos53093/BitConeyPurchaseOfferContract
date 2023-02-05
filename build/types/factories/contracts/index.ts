@@ -2,4 +2,5 @@
 /* tslint:disable */
 /* eslint-disable */
 export * as test from "./test";
+export { Bond__factory } from "./Bond__factory";
 export { Stake__factory } from "./Stake__factory";

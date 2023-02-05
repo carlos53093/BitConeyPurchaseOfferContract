@@ -3,4 +3,5 @@
 /* eslint-disable */
 import type * as test from "./test";
 export type { test };
+export type { Bond } from "./Bond";
 export type { Stake } from "./Stake";

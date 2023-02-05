@@ -12,7 +12,8 @@
   },
   "scripts": {
     "deploy-bsctest": "npx hardhat run --network bsc_test scripts/deployTest.ts",
-    "deploy-bsc": "npx hardhat run --network bsc scripts/deploy.ts"
+    "deploy-bsc": "npx hardhat run --network bsc scripts/deploy.ts",
+    "deploy-bond-test": "npx hardhat run --network bsc_test scripts/deployBond.ts"
   },
   "dependencies": {
     "@nomicfoundation/hardhat-chai-matchers": "^1.0.5",

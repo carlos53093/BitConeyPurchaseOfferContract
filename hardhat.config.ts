@@ -100,7 +100,7 @@ const config: HardhatUserConfig = {
       // },
     },
     bsc_test: {
-      url: 'https://data-seed-prebsc-1-s3.binance.org:8545/',
+      url: 'https://endpoints.omniatech.io/v1/bsc/testnet/public',
       chainId: 97,
       accounts: [process.env.PRIVATE_KEY],
     },
